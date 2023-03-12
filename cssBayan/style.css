@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    background-color: #fce3d3;
+}
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+.main-heading {
+    margin: 5rem 0 2rem 0;
+}
+.crossbar {
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    background-color: #ffddc6;
+}
+.mem-img {
+    display: none;
+    padding: 1rem 0;
+}
+.mem-img img {
+    width: 50%;
+}
+.crossbar-input:checked ~ .mem-img {
+    display: flex;
+    justify-content: center;
+}
+.crossbar-input:checked ~ .crossbar-title {
+    background-color: orangered;
+    padding-left: 4rem;
+}
+.crossbar-title {
+    display: block;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: orange;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+.crossbar-title:hover {
+    background-color: orangered;
+    padding-left: 4rem;
+}
+.crossbar-input {
+    appearance: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.crossbar:hover {
+
+}
+
