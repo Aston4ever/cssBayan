@@ -108,3 +108,13 @@ body {
     }
 }
 
+@media (max-width: 880px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (max-width: 380px) {
+    html {
+        font-size: 37.5%;
+    }
+}
