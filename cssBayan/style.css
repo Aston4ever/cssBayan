@@ -24,6 +24,7 @@ body {
     margin: 5rem 0 2rem 0;
 }
 .crossbar {
+    width: 100%;
     border: 1px solid black;
     margin-bottom: 1rem;
     background-color: #ffddc6;
@@ -44,6 +45,9 @@ body {
 .crossbar-input:checked ~ .crossbar-title {
     background-color: orangered;
     padding-left: 4rem;
+}
+.crossbar-input:checked ~ .crossbar-title .icon-arrow {
+    transform: rotate(90deg);
 }
 .crossbar-title {
     display: flex;
@@ -77,4 +81,12 @@ body {
 }
 .accordion:hover .icon-arrow {
     visibility: visible;
+}
+
+@media (hover: hover) {
+
+}
+
+@media (hover: none) {
+
 }
