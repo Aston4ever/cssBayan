@@ -16,7 +16,7 @@ body {
     background-color: #fce3d3;
 }
 .container {
-    max-width: 100rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 0 3.2rem;
 }
@@ -29,29 +29,33 @@ body {
     background-color: #ffddc6;
 }
 .mem-img {
-    display: none;
-    padding: 1rem 0;
-}
-.mem-img img {
-    width: 50%;
-}
-.crossbar-input:checked ~ .mem-img {
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+.mem-img img {
+    width: 0;
+    transition: width 0.4s;
+}
+
+.crossbar-input:checked ~ .mem-img img {
+    width: 60%;
 }
 .crossbar-input:checked ~ .crossbar-title {
     background-color: orangered;
     padding-left: 4rem;
 }
 .crossbar-title {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     padding: 1rem 2rem;
     background-color: orange;
     color: white;
     transition: all 0.3s ease-out;
 }
-.crossbar-title:hover {
+.crossbar-title:hover,
+.crossbar:hover .crossbar-title {
     background-color: orangered;
     padding-left: 4rem;
 }
@@ -62,7 +66,15 @@ body {
     height: 0;
 }
 
-.crossbar:hover {
-
+.crossbar:hover .mem-img img {
+    width: 60%;
 }
 
+.icon-arrow {
+    visibility: hidden;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.accordion:hover .icon-arrow {
+    visibility: visible;
+}
