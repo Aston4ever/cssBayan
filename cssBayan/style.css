@@ -107,6 +107,11 @@ body {
         padding-left: 4rem;
     }
 }
+@media (hover:none) {
+    .icon-arrow {
+        visibility: visible;
+    }
+}
 
 @media (max-width: 880px) {
     html {
