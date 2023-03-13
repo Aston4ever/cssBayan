@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    background-color: #fce3d3;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.main-heading {
+    margin: 5rem 0 2rem 0;
+}
+
+.crossbar {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    background-color: #ffddc6;
+}
+
+.mem-img {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.mem-img img {
+    width: 0;
+    transition: width 0.4s;
+}
+
+.crossbar-input:checked ~ .mem-img img {
+    width: 60%;
+}
+
+.crossbar-input:checked ~ .crossbar-title {
+    background-color: orangered;
+    padding-left: 4rem;
+}
+
+.crossbar-input:checked ~ .crossbar-title .icon-arrow {
+    animation-name: slidein;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.crossbar-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: orange;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.crossbar-input {
+    appearance: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.crossbar:hover .mem-img img {
+    width: 60%;
+}
+.crossbar-input:checked ~ .mem-img:active {
+    background-color: #ad947a;
+}
+
+.icon-arrow {
+    visibility: hidden;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.accordion:hover .icon-arrow {
+    visibility: visible;
+}
+
+@keyframes slidein {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@media (hover: hover) {
+    .crossbar-title:hover,
+    .crossbar:hover .crossbar-title {
+        background-color: orangered;
+        padding-left: 4rem;
+    }
+}
+@media (hover:none) {
+    .icon-arrow {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 880px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (max-width: 380px) {
+    html {
+        font-size: 37.5%;
+    }
+}
