@@ -37,6 +37,7 @@ body {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 1s;
 }
 
 .mem-img img {
@@ -79,6 +80,9 @@ body {
 
 .crossbar:hover .mem-img img {
     width: 60%;
+}
+.crossbar-input:checked ~ .mem-img:active {
+    background-color: #ad947a;
 }
 
 .icon-arrow {
